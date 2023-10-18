@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Water App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #eaf2f8;
+            margin: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            border-bottom: 5px solid #1e6f9e;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s;
+        }
+        button {
+            background-color: #1e6f9e;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #1271a5;
+        }
+        .tip {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚰 Free Water App 📱</h1>
+        <p>We will tell you how to get free water!</p>
+    </header>
+    <section>
+        <h2>💡 How do you get free water? 💧</h2>
+        <p class="tip" id="tipText">Click the button below to get a random way to get free water!</p>
+        <button id="tipButton">Get Random Tip</button>
+    </section>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YMTLkDrcr28?si=dNkohjKGgCUxyD-o" frameborder="0" allowfullscreen></iframe>
+    </div>  
+    <script>
+        // Array of water-saving tips
+        const tips = [
+            "Drink from your neighbor's hose 😋",
+            "Drink from a contanimated lake (you might die)",
+            "Drink rainwater as it falls from the sky.",
+            "Drink from the public school water fountain",
+            "Ask your friend politely for a bottle of water",
+            "Take a trip to the sewers",
+            "Melt icecubes",
+            "People are mostly made of water. 👀",
+            "THE OCEAN!!!",
+        ];
+
+        // Function to display a random tip when the button is clicked
+        document.getElementById("tipButton").addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            document.getElementById("tipText").textContent = tips[randomIndex];
+        });
+    </script>
+</body>
+</html>
