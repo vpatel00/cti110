@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Morality Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('child.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        #question-container {
+            display: none;
+        }
+        #question-image {
+            max-width: 100%;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Morality Questions</h1>
+    <button id="start-button">Start</button>
+    <div id="question-container">
+        <p id="question"></p>
+        <img id="question-image" src="" alt="">
+        <button id="yes-button">Yes</button>
+        <button id="no-button">No</button>
+    </div>
+
+    <script>
+        const questionData = [
+            {
+                question: "is it okay to kill people for umm ermmm yeah",
+                image: "grandma.jpg"   
+            },
+            {
+                question: "is it okay to [REDACTED]",
+                image: "please.png"
+            },
+            {
+                question: "is it okay to rip the fabric of space and time as we know it for fun",
+                image: "space.jpg"
+            },
+            {
+                question: "is it okay to drop kick a child",
+                image: "child.png"
+            },
+            {
+                question: "is it okay to burn down a house because why not",
+                image: "fire.png"
+            },
+            {
+                question: "is it okay to hack the government because you're borerd",
+                image: "biden.jpg"
+            },
+            {
+                question: "is it okay to STEAL from the poor",
+                image: "robber.png"
+            },
+            {
+                question: "is it okay to run over children with your car and blame it on the crossing guard",
+                image: "crossing.png"
+            },
+            // Add more question-image pairs here
+        ];
+
+        const startButton = document.getElementById("start-button");
+        const questionContainer = document.getElementById("question-container");
+        const questionElement = document.getElementById("question");
+        const questionImage = document.getElementById("question-image");
+        const yesButton = document.getElementById("yes-button");
+        const noButton = document.getElementById("no-button");
+
+        let usedQuestions = [];
+
+        startButton.addEventListener("click", startGame);
+
+        function startGame() {
+            startButton.style.display = "none";
+            usedQuestions = [];
+            showRandomQuestion();
+        }
+
+        function showRandomQuestion() {
+            if (questionData.length === 0) {
+                questionContainer.style.display = "none";
+                questionElement.textContent = "No more questions available.";
+                return;
+            }
+
+            const availableQuestions = questionData.filter(q => !usedQuestions.includes(q.question));
+            if (availableQuestions.length === 0) {
+                usedQuestions = [];
+            }
+
+            const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+            const randomQuestionData = availableQuestions[randomIndex];
+            usedQuestions.push(randomQuestionData.question);
+            questionElement.textContent = randomQuestionData.question;
+            questionImage.src = randomQuestionData.image;
+            questionImage.alt = randomQuestionData.question;
+            questionContainer.style.display = "block";
+            yesButton.addEventListener("click", showRandomQuestion);
+            noButton.addEventListener("click", showRandomQuestion);
+        }
+    </script>
+    <p><b>This site was created with the assistance of ChatGPT😋</b></p>
+</body>
+</html>

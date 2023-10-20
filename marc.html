@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve DLC</title>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STEVE DLC TIPS</title>
+        <h1>PASSWORD IS "PASSWORD"</h1>
+</head>
+<body>
+    <h1>STEVE DLC TIPS</h1>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <button id="generateButton">Generate Random Text</button>
+    <p id="randomText"></p>
+    <p>Click Count: <span id="clickCount">0</span></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yGsdSEE9neE?rel=0" frameborder="0" allowfullscreen></iframe>
+    <script>
+        let clickCounter = 0;
+        const password = "PASSWORD"; // Set your password here
+
+        function generateRandomText() {
+            if (document.getElementById("password").value === password) {
+                const texts = [
+    "Practice Your Mining",
+    "Build Blocks for Mobility",
+    "Master Short Hop Aerials",
+    "Learn Resource Management",
+    "Utilize Steve's Down Tilt",
+    "Use the Crafting Table Wisely",
+    "Down Smash for Defense",
+    "Minecart for Surprise Attacks",
+    "Maintain Your Weapons",
+    "Edgeguard with TNT",
+    "Create Safe Zones with Blocks",
+    "Mix Up Your Recovery",
+    "Pressure Opponents with Anvil",
+    "Learn Item Combos",
+    "Utilize Up Tilt for Juggling",
+    "Pivot Grabs for Positioning",
+    "Practice B-Reversals",
+    "Craft Weapons Strategically",
+    "Pay Attention to Anvil's Shadow",
+    "Use Blocks to Recover",
+    "Practice Shield Dropping",
+    "Edgeguard with Minecart",
+    "Use Jab Locks",
+    "Minecart for Stage Control",
+    "Combo with Up Air",
+    "Bury Opponents with Down Smash",
+    "Master Perfect Shielding",
+    "Utilize the Enderman Assist Trophy",
+    "Control TNT Placement",
+    "Craft the Right Tools for the Job",
+    "Know Your Grabs",
+    "Steve's TNT Edgeguarding",
+    "Use Blocks to Gimp Recoveries",
+    "Pay Attention to Redstone",
+    "B-Reverse with Minecart",
+    "Approach with Down Air",
+    "Learn Ledge Trapping",
+    "Mix Up Your Approaches",
+    "Use Zombie for Pressure",
+    "Combos with Down Tilt",
+    "Mine for Gold and Iron",
+    "Anvil for KOs",
+    "Practice Grab Combos",
+    "Be Mindful of Steve's Mobility",
+    "Combo with Up Tilt and Up Air",
+    "Learn Weapon Durability",
+    "Approach with Dash Attacks",
+    "Use the Zombie Craft for Stalling",
+    "Know Your Crafting Priorities",
+    "B-Reversal for Stage Control",
+    "Create Distractions with TNT",
+    "Steve's Wall for Defense",
+    "Edgeguard with Up Smash",
+    "Mix Up Your Throws",
+    "Learn to Z-Drop",
+    "Anvil for Edgeguarding",
+    "Combo with Down Tilt and Up Air",
+    "Use Redstone for Traps",
+    "Practice Edge Cancelling",
+    "Utilize the Crafting Table as a Shield",
+    "Edgeguard with Down Tilt",
+    "Master Steve's Combos",
+    "Gather Resources During Downtime",
+    "Create Resource Stockpiles",
+    "Build Walls for Defense",
+    "Edgeguard with Up Tilt",
+    "Learn to Ledge Trump",
+    "Mix Up Your Recovery with Elytra",
+    "Approach with Side Tilt",
+    "Gimp Recoveries with Blocks",
+    "Use Up Air for Juggling",
+    "Time Your Minecart Engagements",
+    "Master Reverse Aerial Rush (RAR)",
+    "Craft Diamond Tools for KOs",
+    "Practice Shield Parrying",
+    "Utilize Redstone as a Trap",
+    "Edgeguard with Back Air",
+    "B-Reverse with TNT",
+    "Recover Using Minecart",
+    "DI to Survive",
+    "Learn to Craft Quickly",
+    "Combo with Down Air",
+    "Use Zombie for Grabs",
+    "Edgeguard with Down Air",
+    "Stall with Blocks",
+    "Mix Up Your Recovery Timing",
+    "B-Reverse TNT Gimps",
+    "Master Reverse Up Smash",
+    "Combo with Down Throw",
+    "Minecart Edgeguarding",
+    "Use Zombie for Tech Chases",
+    "Practice Ledge Trumping",
+    "Mix Up Your Ledge Options",
+    "Recover Using Up Tilt",
+    "Edgeguard with Side Smash",
+    "DI to Avoid KOs",
+    "B-Reverse with Down Tilt",
+    "Combo with Side Tilt",
+    "Gather Resources at Full Capacity",
+    "Master Jab Lock Setups",
+    "Use Down Smash for Two-Frames",
+    "Edgeguard with Enderman's Grab",
+    "Practice B-Reverse TNT Recovery",
+    "Utilize Back Throw for KOs",
+    "Combo with Forward Air",
+    "Gather Resources During Battle",
+    "Mix Up Your Roll Timing",
+    "Edgeguard with Zombie's F-Smash",
+    "Master Ledge Trump Punishes",
+    "Practice B-Reversal Movement",
+    "Use Up Smash for Two-Frames",
+    "Combo with Down Air into Up Smash",
+    "Recover Using Minecart's Glide",
+    "Edgeguard with Minecart's Jump",
+    "DI to Survive Edgeguarding",
+    "Master Shield Drop Combos",
+    "Utilize Zombie's Grabs",
+    "Create Resource Traps",
+];// Add your text options here
+                const randomIndex = Math.floor(Math.random() * texts.length);
+                document.getElementById("randomText").textContent = texts[randomIndex];
+                clickCounter++;
+                document.getElementById("clickCount").textContent = clickCounter;
+            } else {
+                alert("Incorrect password. Try again.");
+            }
+        }
+
+        document.getElementById("generateButton").addEventListener("click", generateRandomText);
+    </script>
+</body>
+</html>
